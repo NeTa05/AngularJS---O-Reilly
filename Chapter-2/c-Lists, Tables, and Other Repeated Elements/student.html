@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Repeated Elements</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/student-controller.js"></script>
+</head>
+<body ng-controller="StudentController">
+	<ul>
+		<li ng-repeat="student in students">
+			<a href="/student/view/{{student.id}}">{{student.name}}</a>
+		</li>
+	</ul>
+	<button ng-click="insertTom()">Insert</button>
+</body>
+</html>
