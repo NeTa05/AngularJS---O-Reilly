@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="ShoppingModule">
+<head>
+	<title>Organizing Dependencies with Modules</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/services/shopping-service.js"></script>
+	<script type="text/javascript" src="js/controllers/shopping-controller.js"></script>
+</head>
+<body ng-controller="ShoppingController">
+	<h1>Shop!</h1>
+	<table>
+		<tr ng-repeat="item in items">
+			<td>{{item.title}}</td>
+			<td>{{item.description}}</td>
+			<td>{{item.price | currency}}</td>
+		</tr>
+	</table>
+</body>
+</html>
