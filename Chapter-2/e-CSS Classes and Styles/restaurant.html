@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Classes and Styles</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/restaurant-controller.js"></script>
+	<style type="text/css">
+		.selected {
+			background-color: lightgreen;
+		}
+	</style>
+</head>
+<body>
+
+	<table ng-controller="RestaurantTableController">
+		<tr ng-repeat="restaurant in directory" ng-click="selectRestaurant($index)"
+		ng-class="{selected: $index==selectedRow}">
+		<td>{{restaurant.name}}</td>
+		<td>{{restaurant.cuisine}}</td>
+		</tr>
+	</table>
+
+</body>
+</html>

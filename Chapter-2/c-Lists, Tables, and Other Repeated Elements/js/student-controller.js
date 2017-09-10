@@ -6,7 +6,7 @@ angular.module('myApp', []).controller('StudentController', function($scope) {
 	
 	$scope.students = students;
 	$scope.insertTom = function () {
-							  //index, howmany, items	
+						  	//index, howmany, items	
 		$scope.students.splice(1, 0, {name:'Tom Thumb', id:'4'});
 	};
 });
